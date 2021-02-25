@@ -53,7 +53,7 @@
     decQuad quotient;
     
     decQuad sinResultValue;
-    quotient = my_decQuadRemainderNear(&remainder, &operandValue, &Dec_pi, &DQ_set);
+    quotient = *decQuadRemainderNear(&remainder, &operandValue, &Dec_pi, &DQ_set);
     if (decQuadIsZero(&remainder)) {
         decQuadZero(&sinResultValue);
     }
@@ -73,7 +73,7 @@
     decQuad cosResultValue;
     decQuad tmpDec;
     decQuadSubtract(&tmpDec, &Dec_pi_2, &operandValue, &DQ_set);
-    quotient = my_decQuadRemainderNear(&remainder, &tmpDec, &Dec_pi, &DQ_set);
+    quotient = *decQuadRemainderNear(&remainder, &tmpDec, &Dec_pi, &DQ_set);
     if (decQuadIsZero(&remainder)) {
         decQuadZero(&cosResultValue);
     }

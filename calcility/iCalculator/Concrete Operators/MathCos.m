@@ -52,7 +52,7 @@
     decQuad tmpDec;
     decQuadSubtract(&tmpDec, &Dec_pi_2, &operandValue, &DQ_set);
     decQuad remainder;
-    decQuad quotient = my_decQuadRemainderNear(&remainder, &tmpDec, &Dec_pi, &DQ_set);
+    decQuad quotient = *decQuadRemainderNear(&remainder, &tmpDec, &Dec_pi, &DQ_set);
     decQuad resultValue;
     if (decQuadIsZero(&remainder)) {
         decQuadZero(&resultValue);

@@ -50,7 +50,7 @@
     FTAssert(operand);
     decQuad operandValue = operand.value;
     decQuad remainder;
-    decQuad quotient = my_decQuadRemainderNear(&remainder, &operandValue, &Dec_pi, &DQ_set);
+    decQuad quotient = *decQuadRemainderNear(&remainder, &operandValue, &Dec_pi, &DQ_set);
     decQuad resultValue;
     if (decQuadIsZero(&remainder)) {
         decQuadZero(&resultValue);
