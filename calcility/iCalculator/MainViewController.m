@@ -154,6 +154,7 @@
     }
     
     FTTableView *historyTableView = self.historyTableView;
+    [historyTableView setContentInsetAdjustmentBehavior: UIScrollViewContentInsetAdjustmentNever];
     historyTableView.exclusiveTouch = YES;
     historyTableView.rowHeight = HTVC_EXPR_TOP_MARGIN + HTVC_EXPR_DEFAULT_HEIGHT + HTVC_EXPR_ANS_GAP + HTVC_ANS_HEIGHT + HTVC_BOTTOM_MARGIN + 1.0/*Separator*/;
     historyTableView.backgroundColor = [UIColor colorWithHue:211/359.0 saturation:0.15 brightness:1.0 alpha:1.0];
@@ -1267,7 +1268,6 @@
         CGRect editorFrame = self.editorBackView.frame;
         CGFloat bottomSpace = rootViewHeight - CGRectGetMaxY(editorFrame);
         CGFloat mathKeyboardHeight = CGRectGetHeight([MathKeyboard sharedKeyboard].bounds);
-        FTAssert_DEBUG(0.0 <= bottomSpace && bottomSpace <= mathKeyboardHeight);
         if (!_editorIsDragging) {
             if (touchLocation.y <= CGRectGetMinY(editorFrame)) return;
             _editorIsDragging = YES;
