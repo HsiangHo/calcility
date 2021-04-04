@@ -840,14 +840,7 @@
             self.navigationBarTopToTopGuideConstraint.constant = 0.0;
         }
         
-        if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
-            [MathEnvironment sharedEnvironment].maximumSignificantDigits = 15;
-            self.auxKeypad.hidden = NO;
-        }
-        else {
-            [MathEnvironment sharedEnvironment].maximumSignificantDigits = 9;
-            self.auxKeypad.hidden = YES;
-        }
+        [MathEnvironment sharedEnvironment].maximumSignificantDigits = 12;
     }
     else {
         typeof(self) __weak weakSelf = self;
@@ -867,7 +860,6 @@
         }
         
         [MathEnvironment sharedEnvironment].maximumSignificantDigits = (g_isPhone && g_isClassic) ? 12 : 15;
-        self.auxKeypad.hidden = NO;
     }
     
     [self setNeedsStatusBarAppearanceUpdate];
