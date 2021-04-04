@@ -208,7 +208,12 @@
     
     UIView *auxKeypad = [[UIView alloc] initWithFrame:CGRectZero];
     auxKeypad.translatesAutoresizingMaskIntoConstraints = NO;
-    auxKeypad.backgroundColor = [UIColor clearColor];
+    auxKeypad.backgroundColor = [UIColor colorWithWhite:0.98 alpha:0.95];
+    auxKeypad.layer.shadowColor = UIColor.grayColor.CGColor;
+    auxKeypad.layer.shadowOffset = CGSizeMake(1, 1);
+    auxKeypad.layer.shadowOpacity = 1.0;
+    auxKeypad.layer.shadowRadius = 2;
+    auxKeypad.layer.cornerRadius = 3.0;
     auxKeypad.alpha = 0.0;
     
     [editorBackView addSubview:(_editableExpressionScrollView = editableExpressionScrollView)];
@@ -308,8 +313,9 @@
     [NSLayoutConstraint constraintWithItem:equalSign attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:answerBackView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:editableExpressionView.insets.left].active = YES;
     [NSLayoutConstraint constraintWithItem:answerBackView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:equalSign attribute:NSLayoutAttributeBottom multiplier:1.0 constant:answerExpressionView.insets.bottom].active = YES;
 
-    [NSLayoutConstraint constraintWithItem:auxKeypad attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:answerBackView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0].active = YES;
-    [NSLayoutConstraint constraintWithItem:auxKeypad attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:answerBackView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:auxKeypad attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:answerBackView attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-2.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:auxKeypad attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:answerBackView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:1.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:auxKeypad attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:20.0].active = YES;
 
     if (g_isPhone) {
         [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[undoAuxKey(==auxKeyWidth)][redoAuxKey(==auxKeyWidth)][downAuxKey(==auxKeyWidth)]|" options:(NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom) metrics:metrics views:views]];
@@ -317,7 +323,6 @@
     else {
         [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[undoAuxKey(==auxKeyWidth)][redoAuxKey(==auxKeyWidth)]|" options:(NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom) metrics:metrics views:views]];
     }
-    [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[undoAuxKey(==44.0)]|" options:0 metrics:nil views:views]];
         
     /**************************************************************************/
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
@@ -840,7 +845,12 @@
             self.navigationBarTopToTopGuideConstraint.constant = 0.0;
         }
         
-        [MathEnvironment sharedEnvironment].maximumSignificantDigits = 12;
+        if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+            [MathEnvironment sharedEnvironment].maximumSignificantDigits = 12;
+        }
+        else {
+            [MathEnvironment sharedEnvironment].maximumSignificantDigits = 15;
+        }
     }
     else {
         typeof(self) __weak weakSelf = self;
@@ -1596,6 +1606,10 @@
 
 #define AUTO_SCROLLING_MIN_X_STEP   16.0
 #define AUTO_SCROLLING_MIN_Y_STEP    0.0
+
+- (void)editableExpressionViewDidChangeSelection:(MathEditableExpressionView *)editableExpressionView {
+    [self traitCollectionDidChange:nil];
+}
 
 - (BOOL)editableExpressionView:(MathEditableExpressionView *)editableExpressionView scrollForTrackingPoint:(CGPoint)point
 {
