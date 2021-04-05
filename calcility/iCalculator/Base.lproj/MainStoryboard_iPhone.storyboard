@@ -146,10 +146,12 @@
                                                     <rect key="frame" x="94" y="20" width="8" height="4"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="AHF-Ux-9hP" firstAttribute="centerY" secondItem="QiY-LP-gOC" secondAttribute="centerY" id="8UO-m2-hDd"/>
                                                 <constraint firstAttribute="bottom" secondItem="QiY-LP-gOC" secondAttribute="bottom" id="CLK-0n-xeU"/>
+                                                <constraint firstItem="QiY-LP-gOC" firstAttribute="leading" secondItem="2aZ-wV-qfa" secondAttribute="leading" constant="60" id="FHJ-N2-2uq"/>
+                                                <constraint firstAttribute="trailing" secondItem="QiY-LP-gOC" secondAttribute="trailing" constant="60" id="TeS-ww-uVM"/>
                                                 <constraint firstAttribute="centerX" secondItem="QiY-LP-gOC" secondAttribute="centerX" id="fg1-yG-sjw"/>
                                                 <constraint firstItem="QiY-LP-gOC" firstAttribute="top" secondItem="2aZ-wV-qfa" secondAttribute="top" id="h8s-JO-q8o"/>
                                                 <constraint firstItem="AHF-Ux-9hP" firstAttribute="trailing" secondItem="QiY-LP-gOC" secondAttribute="trailing" constant="-18" id="jio-5Q-Zmx"/>
