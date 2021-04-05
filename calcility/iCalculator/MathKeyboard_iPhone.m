@@ -563,7 +563,7 @@
         [[NSLayoutConstraint constraintWithItem:scrollView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem: scrollView.superview.safeAreaLayoutGuide attribute:NSLayoutAttributeTop multiplier:1.0 constant:0] setActive:YES];
         [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[pageControl]|" options:0 metrics:nil views:views]];
         
-        [[NSLayoutConstraint constraintWithItem:pageControl attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem: scrollView.superview.safeAreaLayoutGuide attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0] setActive:YES];
+        [[NSLayoutConstraint constraintWithItem:pageControl attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem: scrollView.superview.safeAreaLayoutGuide attribute:NSLayoutAttributeBottom multiplier:1.0 constant:8.0] setActive:YES];
         
 //        [[NSLayoutConstraint constraintWithItem:scrollView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem: nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:8] setActive:YES];
 //        [NSLayoutConstraint activateConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[pageControl(==8.0)]-(-5.0)-|" options:0 metrics:nil views:views]];
