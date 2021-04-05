@@ -215,7 +215,7 @@
     auxKeypad.layer.shadowOpacity = 1.0;
     auxKeypad.layer.shadowRadius = 2;
     auxKeypad.layer.cornerRadius = 3.0;
-    auxKeypad.layer.shadowPath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 132, 20)].CGPath;
+    auxKeypad.layer.shadowPath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 500, 20)].CGPath;
     auxKeypad.layer.shouldRasterize = YES;
     auxKeypad.layer.rasterizationScale = UIScreen.mainScreen.scale;
     auxKeypad.alpha = 0.0;
