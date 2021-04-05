@@ -314,10 +314,10 @@
                                         </tableViewCellContentView>
                                         <constraints>
                                             <constraint firstItem="100-qd-O8w" firstAttribute="top" secondItem="Xe3-pb-ZrC" secondAttribute="top" constant="10" id="07U-TU-GSf"/>
-                                            <constraint firstItem="EtJ-vf-Gje" firstAttribute="leading" secondItem="Xe3-pb-ZrC" secondAttribute="leading" constant="32" id="TH3-Y7-tTL"/>
-                                            <constraint firstAttribute="trailing" secondItem="100-qd-O8w" secondAttribute="trailing" constant="15" id="Vnb-k7-vMU"/>
+                                            <constraint firstItem="EtJ-vf-Gje" firstAttribute="leading" secondItem="Xe3-pb-ZrC" secondAttribute="leadingMargin" constant="16" id="TH3-Y7-tTL"/>
+                                            <constraint firstAttribute="rightMargin" secondItem="100-qd-O8w" secondAttribute="rightMargin" constant="7" id="Vnb-k7-vMU"/>
                                             <constraint firstItem="100-qd-O8w" firstAttribute="centerY" secondItem="jlU-QI-W3L" secondAttribute="centerY" id="tal-e0-ZnN"/>
-                                            <constraint firstItem="jlU-QI-W3L" firstAttribute="leading" secondItem="Xe3-pb-ZrC" secondAttribute="leading" constant="15" id="veg-8f-DFX"/>
+                                            <constraint firstItem="jlU-QI-W3L" firstAttribute="leading" secondItem="Xe3-pb-ZrC" secondAttribute="leadingMargin" constant="-1" id="veg-8f-DFX"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -634,7 +634,7 @@
                                             <constraint firstItem="p1X-0x-hL5" firstAttribute="baseline" secondItem="13l-As-aty" secondAttribute="baseline" id="DZW-3C-oan"/>
                                             <constraint firstAttribute="centerY" secondItem="AQ5-Z1-gvz" secondAttribute="centerY" id="JcQ-Dm-Pm3"/>
                                             <constraint firstItem="13l-As-aty" firstAttribute="leading" secondItem="p1X-0x-hL5" secondAttribute="trailing" id="RGz-AQ-osi"/>
-                                            <constraint firstItem="p1X-0x-hL5" firstAttribute="leading" secondItem="jvA-Xh-jSf" secondAttribute="leading" constant="15" id="Wvf-GV-Qzp"/>
+                                            <constraint firstItem="p1X-0x-hL5" firstAttribute="leading" secondItem="jvA-Xh-jSf" secondAttribute="leadingMargin" constant="-1" id="Wvf-GV-Qzp"/>
                                             <constraint firstItem="AQ5-Z1-gvz" firstAttribute="leading" secondItem="13l-As-aty" secondAttribute="trailing" id="ncY-dt-Uuc"/>
                                             <constraint firstAttribute="centerY" secondItem="p1X-0x-hL5" secondAttribute="centerY" id="uDF-jH-Nec"/>
                                         </constraints>
@@ -671,7 +671,7 @@
                                             <constraint firstItem="Zja-Bc-oYa" firstAttribute="baseline" secondItem="en9-Y4-NNY" secondAttribute="baseline" id="FvS-Nc-gvF"/>
                                             <constraint firstAttribute="centerY" secondItem="t7y-xB-MhS" secondAttribute="centerY" id="H6s-OJ-I0x"/>
                                             <constraint firstItem="t7y-xB-MhS" firstAttribute="leading" secondItem="en9-Y4-NNY" secondAttribute="trailing" id="Kfz-gG-Js3"/>
-                                            <constraint firstItem="Zja-Bc-oYa" firstAttribute="leading" secondItem="csp-M3-kQF" secondAttribute="leading" constant="15" id="T8E-SS-CTr"/>
+                                            <constraint firstItem="Zja-Bc-oYa" firstAttribute="leading" secondItem="csp-M3-kQF" secondAttribute="leadingMargin" constant="-1" id="T8E-SS-CTr"/>
                                             <constraint firstAttribute="centerY" secondItem="Zja-Bc-oYa" secondAttribute="centerY" id="fDf-6f-ZMj"/>
                                         </constraints>
                                         <connections>
