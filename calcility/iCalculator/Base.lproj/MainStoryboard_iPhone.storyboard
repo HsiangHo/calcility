@@ -121,7 +121,7 @@
                                         <barButtonItem key="leftBarButtonItem" image="UIAccessoryButtonInfo" id="Zqq-CI-vJT" userLabel="Bar Button Item - Info">
                                             <inset key="imageInsets" minX="-4" minY="2" maxX="0.0" maxY="0.0"/>
                                             <connections>
-                                                <segue destination="gg6-ac-Tws" kind="modal" identifier="presentInfo" modalTransitionStyle="flipHorizontal" id="fHi-H6-dBZ"/>
+                                                <segue destination="gg6-ac-Tws" kind="modal" identifier="presentInfo" id="fHi-H6-dBZ"/>
                                             </connections>
                                         </barButtonItem>
                                         <view key="titleView" clipsSubviews="YES" contentMode="scaleToFill" id="2aZ-wV-qfa">
