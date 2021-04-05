@@ -71,7 +71,7 @@
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailComposeViewComtroller = [[MFMailComposeViewController alloc] init];
         mailComposeViewComtroller.mailComposeDelegate = self;
-        [mailComposeViewComtroller setToRecipients:@[@"fish.tribe@icloud.com"]];
+        [mailComposeViewComtroller setToRecipients:@[@"object.xiang@gmail.com"]];
         [mailComposeViewComtroller setSubject:NSLocalizedString(@"Customer Feedback", nil)];
         [self presentViewController:mailComposeViewComtroller animated:YES completion:nil];
     }

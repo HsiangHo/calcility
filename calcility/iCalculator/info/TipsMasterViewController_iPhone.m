@@ -61,11 +61,19 @@
 
 - (IBAction)emailUs:(id)sender
 {
-    MFMailComposeViewController *mailComposeViewComtroller = [[MFMailComposeViewController alloc] init];
-    mailComposeViewComtroller.mailComposeDelegate = self;
-    [mailComposeViewComtroller setToRecipients:@[@"fish.tribe@icloud.com"]];
-    [mailComposeViewComtroller setSubject:NSLocalizedString(@"Customer Feedback", nil)];
-    [self presentViewController:mailComposeViewComtroller animated:YES completion:nil];
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailComposeViewComtroller = [[MFMailComposeViewController alloc] init];
+        mailComposeViewComtroller.mailComposeDelegate = self;
+        [mailComposeViewComtroller setToRecipients:@[@"object.xiang@gmail.com"]];
+        [mailComposeViewComtroller setSubject:NSLocalizedString(@"Customer Feedback", nil)];
+        [self presentViewController:mailComposeViewComtroller animated:YES completion:nil];
+    }
+    else {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Oops, this device can not send mail", nil) message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {}];
+        [alert addAction:cancelAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error

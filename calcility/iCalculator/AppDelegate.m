@@ -18,8 +18,8 @@ NSInteger g_dataVersion;
 BOOL g_isPhone;
 BOOL g_isClassic;
 
-NSString * const g_appStdLink = @"https://itunes.apple.com/app/id686375771?mt=8";
-NSString * const g_appLiteLink = @"https://itunes.apple.com/app/id647645099?mt=8";
+NSString * const g_appStdLink = @"https://itunes.apple.com/app/id1555193080?mt=8";
+NSString * const g_appLiteLink = @"https://itunes.apple.com/app/id1561617154?mt=8";
 
 NSString * const g_appStdName = @"Calcility";
 NSString * const g_appLiteName = @"Calcility (Lite)";
