@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -110,6 +109,10 @@
                                     <constraint firstAttribute="trailing" secondItem="skW-2w-x3y" secondAttribute="trailing" id="wa5-w4-kVB"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcB-Y6-tMB">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1D-zx-56A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
@@ -171,20 +174,25 @@
                             <constraint firstItem="3Ci-gz-KaD" firstAttribute="leading" secondItem="HVj-iL-ISC" secondAttribute="leading" id="3CM-Jy-25X"/>
                             <constraint firstItem="E1D-zx-56A" firstAttribute="top" secondItem="HVj-iL-ISC" secondAttribute="top" id="429-g5-N7H"/>
                             <constraint firstItem="Iqf-gM-4V2" firstAttribute="top" secondItem="3" secondAttribute="top" id="9RE-xU-UMY"/>
+                            <constraint firstItem="HVj-iL-ISC" firstAttribute="trailing" secondItem="qcB-Y6-tMB" secondAttribute="trailing" id="KxI-u4-D6m"/>
+                            <constraint firstItem="qcB-Y6-tMB" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="PT1-TE-mTK"/>
                             <constraint firstItem="E1D-zx-56A" firstAttribute="trailing" secondItem="HVj-iL-ISC" secondAttribute="trailing" id="QGu-KB-rlj"/>
                             <constraint firstItem="E1D-zx-56A" firstAttribute="leading" secondItem="HVj-iL-ISC" secondAttribute="leading" id="RRe-aY-5Cr"/>
                             <constraint firstItem="Iqf-gM-4V2" firstAttribute="leading" secondItem="HVj-iL-ISC" secondAttribute="leading" id="WDV-MX-Afb"/>
                             <constraint firstItem="Iqf-gM-4V2" firstAttribute="trailing" secondItem="HVj-iL-ISC" secondAttribute="trailing" id="X8v-eq-p4H"/>
+                            <constraint firstItem="qcB-Y6-tMB" firstAttribute="leading" secondItem="HVj-iL-ISC" secondAttribute="leading" id="ZJi-87-yCa"/>
                             <constraint firstItem="B2v-Cx-q5D" firstAttribute="leading" secondItem="HVj-iL-ISC" secondAttribute="leading" id="ah9-Qh-iKa"/>
                             <constraint firstItem="HVj-iL-ISC" firstAttribute="trailing" secondItem="3Ci-gz-KaD" secondAttribute="trailing" id="dLw-94-Ewj"/>
                             <constraint firstItem="HVj-iL-ISC" firstAttribute="trailing" secondItem="B2v-Cx-q5D" secondAttribute="trailing" id="dvx-PB-WVz"/>
                             <constraint firstItem="HVj-iL-ISC" firstAttribute="bottom" secondItem="B2v-Cx-q5D" secondAttribute="bottom" id="hfa-0T-r8v"/>
+                            <constraint firstItem="HVj-iL-ISC" firstAttribute="bottom" secondItem="qcB-Y6-tMB" secondAttribute="top" id="vsL-tP-FDz"/>
                             <constraint firstItem="Iqf-gM-4V2" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="xRX-zS-u5H"/>
                             <constraint firstItem="HVj-iL-ISC" firstAttribute="bottom" secondItem="3Ci-gz-KaD" secondAttribute="bottom" constant="-44" id="z21-h7-7ey"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelBarButtonItem" destination="xxe-oA-u2E" id="Ndq-Ej-ddx"/>
+                        <outlet property="coverLayer" destination="qcB-Y6-tMB" id="SN5-fl-QmN"/>
                         <outlet property="deleteBarButtonItem" destination="7ct-pa-VY8" id="PQ8-ta-XOy"/>
                         <outlet property="doneBarButtonItem" destination="Bg6-SS-4cQ" id="FQM-mb-Laa"/>
                         <outlet property="editorBackView" destination="B2v-Cx-q5D" id="a2P-ft-tIQ"/>

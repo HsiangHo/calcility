@@ -34,6 +34,7 @@
 @property (nonatomic, readonly) NSInteger thisYear;
 @property (nonatomic, strong, readonly) NSDate *yesterdayOutset;
 
+@property (weak, nonatomic) IBOutlet UIView *coverLayer;
 @property (weak, nonatomic) IBOutlet FTTableView *historyTableView;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
@@ -344,6 +345,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self.view bringSubviewToFront:_coverLayer];
     
     if (_isFirstRun) {
         if (self.managedObjectContext) {
@@ -1020,6 +1023,7 @@
 
 - (void)showMathKeyboard
 {
+    [self.view bringSubviewToFront:_coverLayer];
     BOOL isPortrait = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation);
     CGFloat mathKeyboardHeight = [MathKeyboard sharedKeyboard].intrinsicContentSize.height;
     [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:1.0 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
@@ -1072,6 +1076,7 @@
 
 - (void)hideMathKeyboard
 {
+    [self.view bringSubviewToFront:_coverLayer];
     BOOL isPortrait = UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation);
     if (g_isPhone && !isPortrait) {
         _forcesStatusBarHidden = YES;
