@@ -679,7 +679,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="eSD-Do-wuc" secondAttribute="bottom" id="6va-HC-zSu"/>
                                                 <constraint firstItem="eSD-Do-wuc" firstAttribute="centerY" secondItem="wL1-dz-Slp" secondAttribute="centerY" id="HmQ-GH-nrj"/>
                                                 <constraint firstAttribute="centerX" secondItem="eSD-Do-wuc" secondAttribute="centerX" id="Yxi-SH-vAI"/>
+                                                <constraint firstItem="eSD-Do-wuc" firstAttribute="leading" secondItem="2tN-TM-Njw" secondAttribute="leading" constant="70" id="aFR-8d-lza"/>
                                                 <constraint firstItem="wL1-dz-Slp" firstAttribute="trailing" secondItem="eSD-Do-wuc" secondAttribute="trailing" constant="-18" id="eed-Ch-FTs"/>
+                                                <constraint firstAttribute="trailing" secondItem="eSD-Do-wuc" secondAttribute="trailing" constant="70" id="tAo-Mz-q3D"/>
                                             </constraints>
                                         </view>
                                         <barButtonItem key="rightBarButtonItem" enabled="NO" image="bar-button-multi-select" id="mxq-uI-AnH" userLabel="Bar Button Item - List">
