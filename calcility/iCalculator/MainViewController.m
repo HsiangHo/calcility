@@ -215,7 +215,6 @@
     auxKeypad.layer.shadowOpacity = 1.0;
     auxKeypad.layer.shadowRadius = 2;
     auxKeypad.layer.cornerRadius = 3.0;
-    auxKeypad.layer.shadowPath = [UIBezierPath bezierPathWithRect: CGRectMake(0, 0, 500, 20)].CGPath;
     auxKeypad.layer.shouldRasterize = YES;
     auxKeypad.layer.rasterizationScale = UIScreen.mainScreen.scale;
     auxKeypad.alpha = 0.0;
@@ -902,6 +901,8 @@
     self.historyTableView.contentInset = insets;
     self.historyTableView.scrollIndicatorInsets = insets;
     [self.view layoutSubviews];  //! WORKAROUND: Otherwise, archiving, say, x² will lead to crash. [Fixed in iOS 8.1]
+    
+    _auxKeypad.layer.shadowPath = [UIBezierPath bezierPathWithRect: _auxKeypad.bounds].CGPath;
     
     if (_indexPathForScrollTarget) {
         [self.historyTableView scrollToRowAtIndexPath:_indexPathForScrollTarget atScrollPosition:UITableViewScrollPositionBottom animated:NO];
